@@ -21,12 +21,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Vega Lite Example Project">
-  <meta property="og:description" content="This is a "showcase" project that uses vega-lite for interactive viz!">
+  <meta property="og:title" content="Group 9 Homework 10">
+  <meta property="og:description" content="Homework 10 by River Liu, Boyu Zhang, Shaojun Zheng,">
   <meta property="og:image" content="assets/pngs/cars.png">
 
-  <title>Vega Lite Example Project</title>
-  <meta name="description" content="This is a "showcase" project that uses vega-lite for interactive viz!">
+  <title>Group 9 Homework 10</title>
+  <meta name="description" content="Homework 10 by River Liu, Boyu Zhang, Shaojun Zheng,">
 
   <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
 
@@ -73,40 +73,26 @@
 
 </nav>
     <div class="col-lg-10 mx-auto mt-5 markdown-body">
-  <h1 id="example-including-vega-lite">Example including vega-lite</h1>
+  <h1 id="homework-10">Homework 10</h1>
 
-<p>Example comes from this <a href="https://blog.4dcu.be/programming/2021/05/03/Interactive-Visualizations.html">great blog post right here</a> that was also used in <a href="https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/blob/main/week01/test_imports_week01.ipynb">our test import script</a>.</p>
+<vegachart schema-url="/assets/json/hw10_1.json" style="width: 100%"></vegachart>
 
-<p>We can use a vegachart HTML tag like so:</p>
+<p>The first graph explores the total number of License types. The X-axis is the name of each License Type, which is nominal data, while the Y-axis records the total number of License types, which is quantitative data. The encoding Type we use is bar chart Y. Bar Chart can clearly and intuitively display the number of different License types.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;vegachart schema-url="/assets/json/cars.json" style="width: 100%"&gt;&lt;/vegachart&gt;
-</code></pre></div></div>
+<p>In this figure, we did the data conversion because MaxRowsError appears when I try to create a drawing that will directly embed a dataset with more than 5000 rows, so we simply disable MaxRowsError.</p>
 
-<vegachart schema-url="/assets/json/cars.json" style="width: 100%"></vegachart>
+<h5 id="use-your-cursor-to-brush-the-left-graph-to-see-the-changes-in-the-right-graph">Use your cursor to brush the left graph to see the changes in the right graph!!!</h5>
 
-<p>In theory, you can also use <a href="https://jekyllrb.com/docs/plugins/hooks/">Jekyll hooks</a> to do it, but I haven’t figured out a way that looks nice yet.</p>
+<vegachart schema-url="/assets/json/sidebyside.json" style="width: 100%"></vegachart>
 
-<h2 id="search-the-data--methods">Search The Data &amp; Methods</h2>
+<p>The heatmap shows how many licenses each state and status, and the bar chart shows how many licenses each type. We used ‘ordinal’ in encoding type because it is easy for audiences to find the category they are interested in. The heatmap uses color gradients to show the number of licenses. The bar chart used Phoebe Ling’s homework #9 plot2, but we changed the color display to the heatmap’s color display. Because nowhere can we show the number in the heatmap, we use color to express the amount. We are interested in all kinds of licenses instead of a specific category, so we didn’t use Python to filter the data. We use the original dataset to make the plot.</p>
 
-<p>Below is where we can put some links to both the data and the analysis code as buttons:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="left"&gt;
-&lt;a class="m-1 btn btn-outline-primary btn-2 " href="https://github.com/vega/vega/blob/main/docs/data/cars.json"&gt;
-  The Data
-&lt;/a&gt;
-&lt;/div&gt;
-
-&lt;div class="right"&gt;
-&lt;a class="m-1 btn btn-outline-primary btn-2 " href="https://blog.4dcu.be/programming/2021/05/03/Interactive-Visualizations.html"&gt;
-  The Analysis
-&lt;/a&gt;
-&lt;/div&gt;
-</code></pre></div></div>
+<p>We are not satisfied with just knowing the number of licenses. We want to understand the amount of licenses in different states and their status. The interactive dashboard can help us see the amount of each type under specific state and status.</p>
 
 <!-- these are written in a combo of html and liquid -->
 
 <div class="left">
-<a class="m-1 btn btn-outline-primary btn-2 " href="https://github.com/vega/vega/blob/main/docs/data/cars.json">
+<a class="m-1 btn btn-outline-primary btn-2 " href="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/licenses_fall2022.csv">
   The Data
 </a>
 </div>
