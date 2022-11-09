@@ -23,7 +23,7 @@ In this figure, we did the data conversion because MaxRowsError appears when I t
 
 ## Plot 2
 
-*Use your cursor to brush the left graph to see the changes in the right graph!!!*
+*Use your cursor to brush the left graph to see the changes in the right graph*
 
 <vegachart schema-url="{{ site.baseurl }}/assets/json/sidebyside.json" style="width: 100%"></vegachart>
 
