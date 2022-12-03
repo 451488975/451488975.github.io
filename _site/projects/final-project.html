@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  
+  
+  
+
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Netflix Has Far More Age Restrictive Contents Than You Think">
+  <meta property="og:description" content="Final project by Boyu Zhang, Phoebe Ling, River Liu, Shaojun Zheng">
+  <meta property="og:image" content="assets/pngs/dataset-cover.jpg">
+
+  <title>Netflix Has Far More Age Restrictive Contents Than You Think</title>
+  <meta name="description" content="Final project by Boyu Zhang, Phoebe Ling, River Liu, Shaojun Zheng">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+
+  <!-- Theme style -->
+  <script src="/assets/js/theme.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    <nav class="navbar navbar-expand-lg navbar-themed">
+
+  <a class="navbar-brand" href="/"><h5><b>451488975.github.io</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-1x fa-bars text-themed"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto"><a class="nav-item nav-link active" href="/projects/">Projects</a>
+
+      <a class="nav-item nav-link " href="/blog/">Blog</a>
+
+      <a class="nav-item nav-link " href="/about/">About</a>
+
+      
+
+      <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+    </div>
+  </div>
+
+</nav>
+    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+  <h1 id="netflix-has-far-more-age-restrictive-contents-than-you-think">Netflix Has Far More Age Restrictive Contents Than You Think</h1>
+<h4 id="author-boyu-zhang-phoebe-ling-river-liu-shaojun-zheng">Author: Boyu Zhang, Phoebe Ling, River Liu, Shaojun Zheng</h4>
+
+<h2 id="introduction">Introduction</h2>
+<p>As one of the most popular movies and tv shows streaming platform, Netflix provides us countless entertaining contents to watch during every movie nights. But have you ever think about these questions when watching movies or tv shows on Netflix:</p>
+
+<p><em>What is average score of the movies in different year?</em><br />
+<em>Which genre has the most restrict-rated contents so I can avoid watching it with my children?</em></p>
+
+<p>Our project would help you answer these questions and hope we can give you a better understanding on some of the data behind Netflix.</p>
+
+<h2 id="what-is-the-average-imdb-score-of-different-genres">What Is The Average IMDB Score of Different Genres?</h2>
+<vegachart schema-url="/assets/json/final_interactive1.json" style="width: 100%"></vegachart>
+
+<p>First, we want to explore the relationship between genre and imdb_score, whether a particular movie genre is more popular among audiences. So, we plotted a histogram with the X-axis representing the genre of the movie and the Y-axis representing the average imdb score of the movie. From the histogram, we can see that certain genres are indeed more popular with audiences. For example, history and war films have an average rating of over 7, while horror films have an average rating of under 6.</p>
+
+<h2 id="how-many-movies-do-different-age-ratings-have">How Many Movies Do Different Age Ratings have?</h2>
+<vegachart schema-url="/assets/json/final_interactive2.json" style="width: 100%"></vegachart>
+
+<p>Next, we want to know the proportion of Movie Ratings and observe which grades of movies filmmakers like to shoot. So, we drew a histogram of movie ratings on the x-axis and the number of movies with each rating on the y-axis. The figure shows that the counts of TV-MA and R-rated movies are the largest, indicating that filmmakers tend to produce R (Under 17 requires an accompanying parent or adult guardian) and TV-MA (this program is specifically designed to be viewed by adults) movies. The producers and directors don’t think too much about the children’s movie market.</p>
+
+<h2 id="how-many-movies-are-there-with-different-genres-and-age-ratings">How Many Movies Are There with Different Genres and Age Ratings?</h2>
+<vegachart schema-url="/assets/json/final_interactive3.json" style="width: 100%"></vegachart>
+
+<p>In addition, we further understood the relationship between genre and movie rating, so we drew a heat map, the x-axis represents the subject matter of the movie, the y-axis represents the age rating of the movie, and the intersecting part represents both a movie genre and age certification from the number of movies, we can see that most of the drama-themed movies are TV-MA-rated, and most thriller-themed movies are R-rated.</p>
+
+<h2 id="interactive-dashboard">Interactive Dashboard</h2>
+
+<p><span style="color:violet"><em>!!!Use your cursor to brush the top graph to see the changes in the bottom graph</em></span></p>
+
+<vegachart schema-url="/assets/json/final_interactive.json" style="width: 100%"></vegachart>
+
+<p>The dashboard shows the number of shows and movies provided by Netflix by movies’ or shows’ primary genre and production country. An audience can use a mouse to select a range of countries and genres. The bar chart on the right side will show the average IMDB score of the movie or shows that match the condition the audience selected each released year.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Netflix is one of the most popular over-the-top streaming services in the world. It is interesting to figure out what kind of movies and TV shows it provides and to infer their target audiences. Customers can also know if Netflix’s service is suitable for them by seeing the analysis results of the Netflix dataset. We present the analysis in age, genre, and score.</p>
+
+<p>In the first plot, we explored the quality of movies/shows by showing the average IMDb score of each genre with a histogram. We can see that certain genres are indeed more popular with audiences and get higher scores. Audiences who love history and war films may be satisfied with the films Netflix provides, but audiences who like to watch horror movies may feel disappointed with the films on Netflix, which have an average rating of under 6.</p>
+
+<p>In the second plot, we showed the number of films in each rating. The figure shows that the counts of TV-MA and R-rated movies are the largest, indicating children and teenagers are not their target audiences. Even the family with children may not be the target as well.</p>
+
+<p>In the third and fourth plots, we further explore the relationship between genre and movie rating and the relationship between genre and produced country by showing a heat map. This gives audiences comprehensive aspects of the genre, produced country, and moving rating.</p>
+
+<p>Ultimately, we used a dashboard to show the relationship between primary genre, production country, released year, and the average IMDB score of films.</p>
+
+<p>Those figures can help audiences comprehensively understand the films’ features on Netflix and choose if this service is suitable for them.</p>
+
+<div class="left">
+<a class="m-1 btn btn-outline-primary btn-2 " href="https://query.data.world/s/7cdylzj6g2k4a7bahcloent6dhb3mf">
+  Data
+</a>
+</div>
+
+<div class="right">
+<a class="m-1 btn btn-outline-primary btn-2 " href="https://github.com/451488975/451488975.github.io/blob/main/python_notebooks/group9_homework10.ipynb">
+  Analysis
+</a>
+</div>
+
+
+</div>
+  </main>
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>Liangzhe Liu</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="mailto:451488975@qq.com"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#db4437'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.github.com/451488975"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a>
+
+</div><small id="attribution">
+    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+
+</footer>
+
+
+<!-- Custom page specific js files -->
+  
+    <script src='/assets/js/vega.min.js' type="text/javascript"></script>
+  
+    <script src='/assets/js/vega-lite.min.js' type="text/javascript"></script>
+  
+    <script src='/assets/js/vega-embed.min.js' type="text/javascript"></script>
+  
+    <script src='/assets/js/justcharts.js' type="text/javascript"></script>
+  
+
+
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+</body>
+
+</html>
